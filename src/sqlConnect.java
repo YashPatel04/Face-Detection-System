@@ -1,5 +1,5 @@
 import java.sql.*;
-public class mysql_connect {
+public class sqlConnect {
     public static void connect(){
         Connection con = null;;
         //String login = System.getenv("login");

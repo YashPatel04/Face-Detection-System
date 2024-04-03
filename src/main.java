@@ -1,8 +1,7 @@
 
 public class main {
     public static void main(String[] args){
-        mysql_connect.connect();
+        sqlConnect.connect();
         detect.detectImage("D:\\Face Recognition System\\Resources\\input.jpg");
-
     }
 }
