@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="objdetect">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../openCV/opencv/build/include/opencv2/objdetect" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

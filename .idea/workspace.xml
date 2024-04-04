@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2a30fa0-928f-4298-8765-50b870994ed2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/Face Recognition System/detect.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Face Recognition System/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Face Recognition System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Face Recognition System.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/objdetect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/align1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/align2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/face1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/face2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/feat1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/feat2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/model.onnx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/rdj.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/output.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/output.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recognize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recognize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sqlConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sqlConnect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +59,14 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/openCV/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar",
+    "last_opened_file_path": "D:/openCV/opencv/build/include/opencv2/objdetect",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
+    "project.structure.proportion": "0.15429688",
     "project.structure.side.proportion": "0.2",
     "settings.build.tools.auto.reload": "SELECTIVE",
     "settings.editor.selected.configurable": "build.tools"
