@@ -1,7 +1,9 @@
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
 import org.opencv.core.Mat;
 
-public class MattoBF extends Mat {
-    public BufferedImage matToBufferedImage(Mat mat) {
+public class conversion{
+    public static BufferedImage matToBufferedImage(Mat mat) {
         int type = BufferedImage.TYPE_BYTE_GRAY;
         if (mat.channels() > 1) {
             type = BufferedImage.TYPE_3BYTE_BGR;

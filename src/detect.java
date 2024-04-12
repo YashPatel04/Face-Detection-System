@@ -1,32 +1,28 @@
-import org.opencv.core.*;
+import org.opencv.core.MatOfRect;
+import org.opencv.core.Rect;
+import org.opencv.core.Scalar;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
+import org.opencv.core.Mat;
 
-public class detect {
-    public static void detectImage(String img){
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        //we load the Haar classifier for the face detection
-        CascadeClassifier detector = new CascadeClassifier();
-        detector.load("Resources/haarcascade_frontalface_default.xml");
+public class detect{
+    public static Mat detect(Mat image){
+        CascadeClassifier haar = new CascadeClassifier("Resources/haarcascade_frontalface_default.xml");
 
-        //Reading the Image
-        Mat image = Imgcodecs.imread(img);
+        Mat grayImg =  new Mat();
+        Imgproc.cvtColor(image,grayImg, Imgproc.COLOR_BGR2GRAY);
 
-        //convert image into grayscale
-        Mat gray = new Mat();
-        Imgproc.cvtColor(image, gray, Imgproc.COLOR_BGR2GRAY);
-
-        //Detect faces
         MatOfRect faces = new MatOfRect();
-        detector.detectMultiScale(gray, faces);
+        haar.detectMultiScale(grayImg,faces);
 
-        //to draw rectangles around recognized faces
-        for (Rect rect : faces.toArray()){
-            Imgproc.rectangle(image, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(0, 255, 0));
+        for(Rect rect: faces.toArray()){
+            Imgproc.rectangle(image,
+                    new org.opencv.core.Point(rect.x, rect.y),
+                    new org.opencv.core.Point(rect.x + rect.width, rect.y + rect.height),
+                    new Scalar(0, 255, 0),
+                    3);
         }
-
-        Imgcodecs.imwrite("Resources/output.jpg", image);
-        System.out.println("Face Detection Completed");
+        return image;
     }
 }

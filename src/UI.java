@@ -1,43 +1,48 @@
-public class UI extends javax.swing.JDialog {
-private javax.swing.JPanel contentPane;
-private javax.swing.JButton buttonOK;
-private javax.swing.JButton buttonCancel;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public UI(){
-setContentPane(contentPane);
-setModal(true);
-getRootPane().setDefaultButton(buttonOK);
+public class UI extends JDialog {
+    private JPanel contentPane;
+    private JButton openCameraButton;
+    private JButton detectButton;
+    private JPanel CPanel;
+    private JLabel Camera;
+    private JButton back;
+    private JButton buttonOK;
 
-buttonOK.addActionListener(new java.awt.event.ActionListener(){public void actionPerformed(java.awt.event.ActionEvent e){onOK();}});
 
-buttonCancel.addActionListener(new java.awt.event.ActionListener(){public void actionPerformed(java.awt.event.ActionEvent e){onCancel();}});
+    public UI() {
+        Engine engine = new Engine(Camera);
+        setContentPane(contentPane);
 
- // call onCancel() when cross is clicked
-setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-addWindowListener(new java.awt.event.WindowAdapter() {
-  public void windowClosing(java.awt.event.WindowEvent e) {
-   onCancel();
-  }
-});
+        ImageIcon icon = new ImageIcon("resources/icon.jpg");
+        Camera.setIcon(icon);
+        Camera.repaint();
+        setModal(true);
+        getRootPane().setDefaultButton(buttonOK);
 
- // call onCancel() on ESCAPE
-contentPane.registerKeyboardAction(  new java.awt.event.ActionListener() {    public void actionPerformed(java.awt.event.ActionEvent e) {      onCancel();
-    }  },  javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0),  javax.swing.JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);}
-
-private void onOK(){
- // add your code here
-dispose();
-}
-
-private void onCancel(){
- // add your code here if necessary
-dispose();
-}
-
-public static void main(String[] args){
-UI dialog = new UI();
-dialog.pack();
-dialog.setVisible(true);
-System.exit(0);
-}
+        back.setEnabled(false);
+        openCameraButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                engine.startCamera();
+                detectButton.setEnabled(true);
+                back.setEnabled(true);
+            }
+        });
+        detectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                engine.startDetect();
+                back.setEnabled(true);
+            }
+        });
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                engine.back();
+            }
+        });
+    }
 }

@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2a30fa0-928f-4298-8765-50b870994ed2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/objdetect.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/align1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/align2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/face1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/face2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/feat1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/feat2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/model.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/rdj.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Face Recognition System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Face Recognition System.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/output.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/output.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Unconfirmed 508391.crdownload" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/hem.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/icon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/icon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/output.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/rdj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/stark.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/detect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/detect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/recognize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recognize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sqlConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sqlConnect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,30 +49,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/openCV/opencv/build/include/opencv2/objdetect",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15429688",
-    "project.structure.side.proportion": "0.2",
-    "settings.build.tools.auto.reload": "SELECTIVE",
-    "settings.editor.selected.configurable": "build.tools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.UI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;right&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;left&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/openCV/javacv-0.7-bin/javacv-bin/javacv-windows-x86_64.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;SELECTIVE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Face Recognition System\Resources" />
+      <recent name="D:\Face Recognition System\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.main">
+    <configuration name="UI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI" />
+      <module name="Face Recognition System" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="login" value="&quot;root&quot;" />
@@ -84,6 +100,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UI" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -102,6 +123,17 @@
       <updated>1712083040936</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

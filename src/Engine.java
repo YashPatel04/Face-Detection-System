@@ -1,49 +1,82 @@
 import org.opencv.core.Mat;
-import org.opencv.core.Core;
+import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
-import org.opencv.video.Video;
 import org.opencv.videoio.VideoCapture;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.MemoryImageSource;
 
-
-public class GUI {
-
-    public GUI(JPanel frame){
-
-        VideoCapture capture = new VideoCapture(0);
-        if(capture.isOpened()){
-            startCamera(capture,camera);
-            System.out.println("Camera is open");
-        }else{
-            System.out.println("Error! Cannot open camera");
-        }
+public class Engine {
+    JLabel cam;
+    VideoCapture capture;
+    public Engine(JLabel cam){
+        this.cam = cam;
     }
-    public void startCamera(VideoCapture capture, JLabel camera){
+    public void startCamera(){
+
         Thread t = new Thread(new Runnable(){
-          @Override
-          public void run(){
-              while(true){
-                  Mat frame = new Mat();
-                  capture.read(frame);
-                  frame = detect.detect(frame);
+            @Override
+            public void run(){
+                while(true){
+                    capture = new VideoCapture(0);
+                    while(capture.isOpened()){
+                        Mat frame = new Mat();
+                        capture.read(frame);
 
-                  ImageIcon image =  new ImageIcon(conversion.matToBufferedImage(frame));
-                  camera.setIcon(image);
-                  camera.repaint();
+                        Imgproc.resize(frame,frame,new Size(674,627));
+                        ImageIcon image =  new ImageIcon(conversion.matToBufferedImage(frame));
+                        cam.setIcon(image);
+                        cam.repaint();
 
-                  // Sleep for a short time to limit the frame rate
-                  try {
-                      Thread.sleep(100);
-                  } catch (InterruptedException e) {
-                      e.printStackTrace();
-                  }
-              }
-          }
+                        // Sleep for a short time to limit the frame rate
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    capture.release();
+                }
+            }
         });
         t.start();
+    }
+    public void startDetect(){
+
+        Thread t = new Thread(new Runnable(){
+            @Override
+            public void run(){
+                while(true){
+                    capture = new VideoCapture(0);
+                    while (capture.isOpened()){
+                        Mat frame = new Mat();
+                        capture.read(frame);
+                        Imgproc.resize(frame,frame,new Size(674,627));
+                        frame = detect.detect(frame);
+
+                        ImageIcon image =  new ImageIcon(conversion.matToBufferedImage(frame));
+                        cam.setIcon(image);
+                        cam.repaint();
+
+                        // Sleep for a short time to limit the frame rate
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    capture.release();
+                }
+            }
+        });
+        t.start();
+    }
+    public void back(){
+        if (capture.isOpened()){
+            capture.release();
+            Thread.currentThread().interrupt();
+            cam.removeAll();
+            cam.setIcon(new ImageIcon("resources/icon.jpg"));
+            cam.repaint();
+        }
     }
 }
