@@ -8,7 +8,7 @@ import org.opencv.core.Mat;
 
 public class detect{
     public static Mat detect(Mat image){
-        CascadeClassifier haar = new CascadeClassifier("Resources/haarcascade_frontalface_default.xml");
+        CascadeClassifier haar = new CascadeClassifier("D:\\Face Recognition System\\resources\\haarcascade_frontalface_default.xml");
 
         Mat grayImg =  new Mat();
         Imgproc.cvtColor(image,grayImg, Imgproc.COLOR_BGR2GRAY);

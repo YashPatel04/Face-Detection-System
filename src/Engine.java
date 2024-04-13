@@ -75,7 +75,7 @@ public class Engine {
             capture.release();
             Thread.currentThread().interrupt();
             cam.removeAll();
-            cam.setIcon(new ImageIcon("resources/icon.jpg"));
+            cam.setIcon(new ImageIcon("D:\\Face Recognition System\\resources\\icon.jpg"));
             cam.repaint();
         }
     }

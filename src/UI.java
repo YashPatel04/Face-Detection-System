@@ -2,13 +2,14 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UI extends JDialog {
+public class UI extends JFrame {
     private JPanel contentPane;
     private JButton openCameraButton;
     private JButton detectButton;
     private JPanel CPanel;
     private JLabel Camera;
     private JButton back;
+    private JButton exitButton;
     private JButton buttonOK;
 
 
@@ -16,10 +17,10 @@ public class UI extends JDialog {
         Engine engine = new Engine(Camera);
         setContentPane(contentPane);
 
-        ImageIcon icon = new ImageIcon("resources/icon.jpg");
+        ImageIcon icon = new ImageIcon("D:\\Face Recognition System\\resources\\icon.jpg");
         Camera.setIcon(icon);
         Camera.repaint();
-        setModal(true);
+        setTitle("Detector");
         getRootPane().setDefaultButton(buttonOK);
 
         back.setEnabled(false);
@@ -32,6 +33,7 @@ public class UI extends JDialog {
             }
         });
         detectButton.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
                 engine.startDetect();
@@ -42,6 +44,12 @@ public class UI extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 engine.back();
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
     }
