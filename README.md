@@ -1,10 +1,17 @@
 # Java Face Detection System using OpenCV
 
-1.  [Introduction](introduction)
-2.  [Dependencies](prerequisites-and-dependencies)
-3.  [Installation](installation)
-4.  [Usage](usage)
-5.  [Contribution](contribution)
+1.  [Introduction](#introduction)
+2.  [Dependencies](#prerequisites-and-dependencies)
+3.  [Installation](#installation)
+4.  [Usage](#usage)
+5.  [Contribution](#contribution)
+
+## Images
+<div style="display: flex;">
+  <img src="https://github.com/YashPatel04/Face-Detection-System/assets/132531512/4415eeb3-ee06-4426-892e-b4be5c29e534" width="500" />
+  <img src="https://github.com/YashPatel04/Face-Detection-System/assets/132531512/ff8d23d7-3d18-4b32-b1c5-652a980de67f" width="500" />
+</div>
+
 
 ## Introduction
 This project is a Java-based face recognition system developed using OpenCV. It utilizes a webcam to capture live video, effectively detecting and highlighting faces in the streaming video feed. With applications spanning from surveillance to various industries, this system employs OpenCV's VideoCapture functionality and Haar cascades classifiers to proficiently recognize and outline faces in real-time video streams. 
